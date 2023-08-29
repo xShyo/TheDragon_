@@ -1,0 +1,68 @@
+DEFENCE:
+  REPULSION:
+    #Disable this defense completely, this function is mainly to avoid removing events in every dragon configuration.
+    enabled: true
+    #Maximum repetitions of the event. If this is exceeded, the event will no longer be executed.
+    max-repetitions: 5
+    #Probability from 1 to 100 for the event to be sent.
+    probability: 20.0
+    #Maximum radius in which the player must be to be repulsed.
+    #It also works in [radius-message] messages.
+    radius: 10
+    #delay in ticks before sending another rejection.
+    delayTicks: 10
+    #Maximum number of repetitions when sending the event.
+    #In this case it would be 6 repulses in the same event.
+    repetitions: 6
+    #Repulsive strength.
+    strength-repulsion: 5
+    #Dirección vertical en la que el jugador debe ser enviado.
+    vertical-repulsion: 0.5
+    #- "[sound] BLOCK_NOTE_BLOCK_PLING;1;1"
+    #- "[command] eco give * 10"
+    #- "[broadcast] &6&lNEXUS &8| &fEl Nexus genero un repulse, te mando a volar."
+    #- "[radius-message] &6"
+    sending:
+      - "[sound] BLOCK_NOTE_BLOCK_PLING;1;1"
+      - "[radius-message] &6"
+      - "[radius-message] <CENTER> &6&lTHE DRAGON &8| &f&lREPULSION </CENTER>"
+      - "[radius-message] <CENTER>&fGenerated a repulse in a radius of &6<radius> &fblocks </CENTER>"
+      - "[radius-message] <CENTER>&fSent &6<affected> &fplayers flying.</CENTER>"
+      - "[radius-message] &6"
+
+ATTACKS:
+  DRAIN_LIFE:
+    enabled: true
+    radius: 5
+    max-repetitions: 5
+    probability: 20
+    #Effects to be given to players within the radius.
+    #- "POTION EFFECT:SECONDS:LEVEL"
+    effects:
+      - "POISON;20;1"
+      - "SLOWNESS;20;1"
+      - "WEAKNESS;20;1"
+    sending:
+      - "[sound] BLOCK_NOTE_BLOCK_PLING;1;1"
+      - "[radius-message] &6"
+      - "[radius-message] <CENTER> &6&lTHE DRAGON &8| &5&lDRAIN_LIFE </CENTER>"
+      - "[radius-message] <CENTER>&fCast a spell in a radius of &6<radius> &fblocks </CENTER>"
+      - "[radius-message] <CENTER>&6<affected> &fnplayers received negative effects.</CENTER>"
+      - "[radius-message] &6"
+  LIGHTNING:
+    enabled: true
+    max-repetitions: 5
+    probability: 20
+    #The radius will be the half circle where the rays are sent.
+    radius: 10
+    #Number of beams to be sent per second.
+    radiansPerSecond: 4
+    #The larger the number, the smaller the radiansPerSecond should be.
+    maxRandomIncrease: 5
+    sending:
+      - "[sound] BLOCK_NOTE_BLOCK_PLING;1;1"
+      - "[radius-message] &6"
+      - "[radius-message] <CENTER> &6&lTHE DRAGON &8| &5&lLIGHTNING </CENTER>"
+      - "[radius-message] <CENTER>&fLaunched a lightning strike in a radius of &6<radius> &fblocks </CENTER>"
+      - "[radius-message] <CENTER>&6<affected> &fplayers were affected.</CENTER>"
+      - "[radius-message] &6"
