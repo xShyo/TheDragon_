@@ -2,186 +2,195 @@ MESSAGES:
   #Here you can edit the bookmarks of the messages.
   PLACEHOLDER:
     INPROGRESS: '&cEVENTO EN CURSO'
-    SECONDS: "segundos"
-    MINUTES: "min"
-    HOURS: "horas"
-    DAYS: "días"
-    SEPARATOR: ", "
-    PLAYERSTATS:
-      TOPSUFFIX: "&5✪ &lTOP DRAGON"
-      NONEWRECORD: "&7&l(SIN RECORD)"
-      NEWRECORD: "&d&l(NUEVO RECORD!)"
+    SECONDS: s
+    MINUTES: m
+    HOURS: h
+    DAYS: d
+    SEPARATOR: ', '
+    PLAYER_STATS:
+      NO_NEW_RECORD: "&7&l(SIN RECORD)"
+      NEW_RECORD: "&d&l(NUEVO RECORD!)"
       POSITION: "&7(Posición #<position>)"
-  COMMANDS:
-    #list
-    LIST: "&8 ✎ &eNombre: &f<1> &8| &eProgramming: &f&l<2> &8| &8✎ &etime: &a<3>"
-    LIST_EMPTY: "&c「DRAGON」 Parece que no hay dragones, ¡Que esperas para crear uno!"
-    #Permissions
-    NOPERMS: '&cNo tienes permisos. &4<permission>'
-    NOPERMS_LOGGER: '&4<player> &cno tiene el permiso: &4<permission>'
-    #Console
-    CONSOLE_SENDER: '&cEste comando solo puede ser ejecutado por usuarios'
-    #Create
-    CREATE: "&c「DRAGON」 &fSe ha creado un dragon con nombre <1>, use &a/jdragon setup <1> &fpara configurarlo"
-    CREATE_USAGE: "&cUso correcto: /jdragon create <dragon> <type>"
-    INVALID_DRAGON_TYPE: "&c「DRAGON」 por favor usa SUMMON_PORTAL o SUMMON_DEFAULT"
-    CREATE_ALPHANUMERIC: "&c「DRAGON」 se debe crear un dragon con un nombre alphanumeric"
-    #Delete
-    DELETE: "&c「DRAGON」 Se ha elimiando el dragon <1>"
-    DELETE_USAGE: "&cUso correcto: /jdragon delete <dragon>"
-    DELETE_NOT_EXIST: "&c「DRAGON」 El dragon <1> no se encontro en la lista."
-    #Spawn
-    SPAWN: "&aEl dragon <1> fue spawneado correctamente!"
-    SPAWN_USAGE: "&cUso correcto: /jdragon spawn <dragon>"
-    SPAWN_NOT_EXIST: "&c「DRAGON」 El dragon <1> no se encontro en la lista. y no se pudo spawnear"
-    SPAWN_PROBLEMSFOUND: '&c「DRAGON」&cSe encontro problemas en la configuracion de <1>. Usa /jdragon info <2> para obtener más información.'
-    SPAWN_INPROGRESS: '&c「DRAGON」 &cEl dragon <1> Ya esta en progreso..'
-    #Cancel
-    CANCEL: '&c「DRAGON」 &aEl dragon <1> fue cancelado con exito.'
-    CANCEL_NOT_EXIST: "&c「DRAGON」 El dragon <1> no se encontro en la lista. y no se pudo cancelar"
-    CANCEL_USAGE: "&cUso correcto: /jdragon cancel <dragon>"
-    CANCEL_NOPROGRESS: '&6&l¡ESPERA! &cEl dragon <1> no esta activo.'
-    #Info
-    INFO: "&aMostrando informacion del dragon <1>"
-    INFO_NOT_EXIST: "&c「DRAGON」 El dragon <1> no se encontro en la lista."
-    INFO_USAGE: "&cUso correcto: /jdragon info <dragon>"
-    #reload
-    RELOAD: '&aTodos los archivos yml se han reiniciado con exitooo'
-    #Setup
-    DRAGONDATA: '&c「DRAGON」 &aConfiguracion para &e<1> &adragon se configuro en &e<2> &acomo &e<3>'
-    INVALID_DATA_FORMAT: '&c「DRAGON」 &cFormato invalido para <1> dragon, en la configuracion: <2>'
-    DRAGONDATA_LOCATION: '&c「DRAGON」 &aSe guardo la ubicacion para &e<1> &adragon en &e<2> &a¡Ahora es &e<3>!'
-    #Crustals
-    CRYSTALS: "El valor para 'crystals' debe ser un número del 1 al 10."
-    #TYPE
-    TYPE_INVALID_DATA: "Ubicación no válida para el tipo <1>"
-    TYPE_NOT_EXIST: "Tipo de dragón desconocido <1w>"
-    #Help
-    SETUP_NOT_EXIST: "&c「DRAGON」 El dragon <1> no se encontro en la lista."
-    INVALID_ARGUMENT: "&c「DRAGON」 Por favor use un numero para ver la pagina."
-    SETUP_HELP: '&c「DRAGON」 Usa /jdragon setup <dragon> crystals|glow|glowcolor|health|name|setloc|xp <value>'
-    SETUP_USAGE: "&cUso correcto: /jdragon setup <dragon> <configType> <value>"
-    MAXHEALTH: |-
-      &7
-      &7&4&lIMPORTANTE: &fAjuste la salud max posible, en su archivo de configuración spigot.yml
-      &eRuta: &7spigot.yml > settings.attribute.maxHealth.max &fo intente con un numero más pequeño.
-      &7
-    CONSOLEHELP: |-
-      &7
-      &e&l COMANDOS DE CONSOLA BASICOS
-      &7
-      &8 » &b/jdragon spawn <dragon> &8- &fForza el spawn del dragon
-      &8 » &b/jdragon cancel <dragon> &8- &fCancela el dragon en curso
-      &8 » &b/jdragon reload &8- &frecarga la configuracion 
-      &8 » &b/jdragon info <dragon> &8- &f Mustra la informacion del dragon.
-      &7
-    HELP:
-      - "&e&lCOMANDOS BASICOS"
-      - "&7"
-      - "&8 » &e/jdragon create &7[dragon] <type> &8- &fCrea la configuracion de tu dragon."
-      - "&8 » &e/jdragon delete &7[dragon] &8- &fBorra la configuracion de tu dragon."
-      - ""
-      - "&8 » &e/jdragon spawn &7[dragon] &8- &fForza el spawn del dragon"
-      - "&8 » &e/jdragon info &7[dragon] &8- &fRevisa la infomación del dragon"
-      - "&8 » &e/jdragon cancel &7[dragon] &8- &fCancela el dragon en curso"
-      - "&8 » &e/jdragon reload &8- &frecarga la configuracion "
-      - "&7"
-      - "&6&lCOMANDOS DE CONFIGURACION"
-      - "&7"
-      - "&8 » &6/jdragon setup &7[dragon] &6setloc &7corner1 &8- &fConfigura la parte superior de la zona del dragon"
-      - "&8 » &6/jdragon setup &7[dragon] &6setloc &7corner2 &8- &fConfigura la parte inferior de la zona del dragon"
-      - "&8 » &6/jdragon setup &7[dragon] &6setloc &7egg &8- &fConfigura la ubicacion del huevo del dragon."
-      - "&8 » &6/jdragon setup &7[dragon] &6setloc &7spawner &8- &fConfigura la ubicacion del dragon."
-      - "&8 » &6/jdragon setup &7[dragon] &6crystals &7(1 - 10) &8- &fsetea los crystales de respawn para generar el dragón."
-      - "&8 » &6/jdragon setup &7[dragon] &6name &7<name> &8- &fconfigura el nombre del dragón sin necesidad de abrir los archivos .yml"
-      - "&8 » &6/jdragon setup &7[dragon] &6health &7<value> &8- &festablece la vida máx. del dragón."
-      - "&8 » &6/jdragon setup &7[dragon] &6xp &7<value> &8- &festablece la exp drop usando el comando."
-      - "&8 » &6/jdragon setup &7[dragon] &6glow &7<true or false> &8- &fEstablece en true o false el brillo del dragón."
-      - "&8 » &6/jdragon setup &7[dragon] &6color &7<color> &8- &fEstablece color del brillo del dragon."
-      - "&7"
-      - "&c&lCOMANDOS DE CONFIGURACION AVANZADA"
-      - "&7"
-      - "&8 » &c/jdragon setup &7[dragon] &carmor &7<value> &8- &fConfigura el atributo armor del dragon."
-      - "&8 » &c/jdragon setup &7[dragon] &carmor-toughness &7<value> &8- &fConfigura el atributo armor toughness del dragon."
-      - "&8 » &c/jdragon setup &7[dragon] &cattack-damage &7<value> &8- &fConfigura el daño de ataque hacia jugadores."
-      - "&8 » &c/jdragon setup &7[dragon] &cmove-speed &7<value> &8- &fConfigura la velocidad del dragon"
-      - "&8 » &c/jdragon setup &7[dragon] &ctype &7<value> &8- &fCambia el tipo de generacion."
-      - "&7"
-      - "&a&lCOMANDOS DE ITEMS"
-      - "&7"
-      - "&8 » &a/jdragon item give (item) &8- &fPodrás dar el item a un jugador"
-      - "&8 » &a/jdragon item save (item) &8- &fPodrás guardar un item en la basedataitems"
-      - "&8 » &a/jdragon item get (item) &8- &fEsto te otorgara el item a ti mismo"
-      - "&8 » &a/jdragon item list &8- &fPodrás ver el listado de items que tienes."
-      - "&8 » &a/jdragon item delete (item) &8- &fElimina un item existente."
-      - "&7"
-    #This is relevant information about item creation.
-    ITEM:
-      HELP: "&c「ITEM」&f&c/jdragon item give|get|list|save|delete <item> <amount>"
-      PLAYERNOTFOUNT: "&c「ITEM」&cJugador no encontrado"
-      LISTISEMPTY: "&c「ITEM」&cNo hay elementos guardados."
-      ITEMINHAND: "&c「ITEM」&cNecesitas sostener un artículo en tu mano"
-      NOT_EXIST: "&c「ITEM」&cNo hay elementos guardados llamados <1>"
-      NOTNUMBER: "&c「ITEM」&c¡El parámetro 'amount' no es un número!"
-      GETITEM: "&c「ITEM」&cEl item se te fue entregado"
-      GIVEITEM: "&c「ITEM」&eEl item <1> x<2> fue entregado para <3> correctamente"
-      SAVE: "&c「ITEM」&aEl item fue guardado como <1>"
-      DELETE: "&c「ITEM」&cEl item <1> fue eliminado correctamente"
-  #Here you can edit the color of the bossbar and actionbar, this is for all dragons.
-  INTEREACTION:
-    ACTIONBAR:
-      ENABLED: true
-      DAMAGEBARMESSAGE: '&cDaño generado al <name>&r &8- &c<damage> &4❤'
-    BOSSBAR:
-      TITLE: '<name> &8「&7<health>&8/&7<maxhealth> &4❤ &8」'
-      COLOR: PURPLE
-      STYLE: SOLID
-  EVENTS:
-    ENDER_DRAGON_TELEPORT:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
-      - '[broadcast] &e&lTELEPORTE &8| &fEl <name> &fse teletransporto a World: <world> X:<x> Y:<y> z:<z>'
-    END_CRYSTAL_EXPLOTING:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
-      - '[broadcast] &5 ۵ &7<prefix><player> &ddestruyó un &5Cristal del End&d!'
-    END_CRYSTAL_RESPAWN:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
-      - '[broadcast] &5 ۵ &d¡Ha reaparecido un &5Cristal del End!'
-    SPAWNING:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
-      - '[broadcast] &5&lDRAGON &8| &fUn dragón aparecerá en &5/warp end&f en &a<time> '
-    DEATH:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
+
+  #If the dragon has a template and not all paths are added, the default will be used by default.
+  TEMPLATES:
+    DEFAULT:
+      END_CRYSTAL_EXPLOTING:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &5 ۵ &7{player} &ddestruyó un &5End Crystal&d!'
+      END_CRYSTAL_RESPAWN:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &5 ۵ &d¡Un End Crystal ha reaparecido!'
+      - '[title] &5 ۵ &d¡Un End Crystal ha reaparecido!'
+      SPAWNING:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &5&lDRAGÓN &8| &fUn dragón aparecerá en &5/warp end&f en &a{time}'
+      DEATH:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
       - '[broadcast] '
-      - '[broadcast] <CENTER> &eEl <name> &eha muerto... </CENTER>'
+      - '[broadcast] <CENTER> &e{customName} &eha muerto... </CENTER>'
       - '[broadcast] '
-      - '[broadcast] <CENTER> &e<prefix><killer> &7dio el golpe final.</CENTER>'
+      - '[broadcast] <CENTER> &e{killer} &7dio el golpe final.</CENTER>'
       - '[broadcast] '
       - '[broadcast] <CENTER> &#fbb347⚔ &#fbaf4cᴇ&#fbac51s&#fba855ᴛ&#fca55aᴀ&#fca15fᴅ&#fc9e64ɪ&#fc9a68s&#fc976dᴛ&#fc9372ɪ&#fd9077ᴄ&#fd8c7bᴀ&#fd8980s&#fd8585⚔ </CENTER>'
-      - '[TopsMessage] <CENTER> &8▸ &c<prefix><displayname> &8- &eDaño&7: &c<damage> ❤ &8- <rewardname> </CENTER>'
+      - '[TopsMessage] <CENTER> &8▸ &c{displayname} &8- &eDaño&7: &c{damage} ❤ &8- {rewardname} </CENTER>'
       - '[broadcast] '
-      - '[PersonalStats] <CENTER> &eTu Daño: &a<playerdamage> &f<state> &7<position> </CENTER>'
+      - '[PersonalStats] <CENTER> &eTu Daño: &a{playerdamage} &f{state} &7{position} </CENTER>'
       - '[broadcast] '
       - '[command] tu comando aquí'
-    REGENERATED:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
+      REGENERATED:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
       - '[broadcast] &8████████'
-      - '[broadcast] &8███&0██&8███ &8» &fEl <name> &facaba de aparecer.'
+      - '[broadcast] &8███&0██&8███ &8» &f{customName} &facaba de aparecer.'
       - '[broadcast] &8██&0█&5█&0██&8██'
       - '[broadcast] &8█&0█&5█&0██&5█&0█&8█ &c&lBOSS'
-      - '[broadcast] &8█&0███&5█&0██&8█ &8► &fVida del Dragón&7: &a<health> &4❤'
-      - '[broadcast] &8█&0█&5█&0████&8█ &8► &6Gana grandes recompensas al ser '
-      - '[broadcast] &8██&0██&5█&0█&8██ &8  &6el uno de los top 3 en daño. '
+      - '[broadcast] &8█&0███&5█&0██&8█ &8► &fSalud del Dragón&7: &a{health} &4❤'
+      - '[broadcast] &8█&0█&5█&0████&8█ &8► &6Gana grandes recompensas siendo '
+      - '[broadcast] &8██&0██&5█&0█&8██ &8  &6uno de los 3 mejores en daño.'
       - '[broadcast] &8████████'
-      - '[command] tu comando aquí'
-    HALFLIFE:
-      - "[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1"
+      - '[command] your command here'
+      HALFLIFE:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
       - '[broadcast] &8████████'
-      - '[broadcast] &8███&0██&8███ &8» &fEl <name> &festa a media vida.'
+      - '[broadcast] &8███&0██&8███ &8» &f{customName} &festá a mitad de salud.'
       - '[broadcast] &8██&0█&5█&0██&8██'
       - '[broadcast] &8█&0█&5█&0██&5█&0█&8█ &c&lBOSS'
-      - '[broadcast] &8█&0███&5█&0██&8█ &8► &fVida del Dragón&7: &a<halflife> &4❤'
-      - '[broadcast] &8█&0█&5█&0████&8█ &8► &6Ve a nuestro /warp end para asesinar'
-      - '[broadcast] &8██&0██&5█&0█&8██ &8  &6al dragon y ganar recompensas.'
+      - '[broadcast] &8█&0███&5█&0██&8█ &8► &fSalud del Dragón&7: &a{halflife} &4❤'
+      - '[broadcast] &8█&0█&5█&0████&8█ &8► &6Ve a nuestro /warp end para matar al dragón'
+      - '[broadcast] &8██&0██&5█&0█&8██ &8  &6y ganar recompensas.'
       - '[broadcast] &8████████'
-      - '[command] tu comando aquí'
+      - '[command] your command here'
 
+
+  ITEM:
+    HELP: "&c「ITEM」&f&c/{cmd} item give|get|list|save|delete <item> <amount>"
+    PLAYERNOTFOUNT: "&c「ITEM」&cJugador no encontrado"
+    LISTISEMPTY: "&c「ITEM」&cNo hay elementos guardados."
+    ITEMINHAND: "&c「ITEM」&cNecesitas sostener un objeto en tu mano"
+    NOT_EXIST: "&c「ITEM」&cNo se encontraron elementos guardados con el nombre {1}"
+    NOTNUMBER:  "&c「ITEM」&c¡El parámetro 'amount' no es un número!"
+    GETITEM: "&c「ITEM」&cEl objeto ha sido entregado"
+    GIVEITEM: "&c「ITEM」&eSe ha entregado el objeto {1} x{2} correctamente a {3}"
+    SAVE: "&c「ITEM」&aEl objeto se ha guardado como {1}"
+    DELETE: "&c「ITEM」&cEl objeto {1} se ha eliminado correctamente"
+
+  COMMANDS:
+    #Create
+    CREATE: "&eEl dragón &7{1} &ede tipo &7{2} &eUsa &7/{cmd} setup {1} &epara configurarlo."
+    CREATE_USAGE: "&8» &cUso correcto: /{cmd} create <dragón> <tipo>"
+    CREATE_EXIST: "&8» &cEse nombre ya existe, prueba con otro."
+    INVALID_DRAGON_TYPE: "&8» &ePor favor, usa &7'SUMMON_PORTAL' &eo &7'SUMMON_DEFAULT'"
+    CREATE_ALPHANUMERIC: "&8» &cUn dragón debe ser creado con un nombre alfanumérico."
+
+    #Teleport
+    TP_USAGE: "&cUso correcto: /{cmd} teleport <dragón> <x> <y> <z> <mundo>"
+    TP_NOT_EXIST: "&8» &cEl dragón {1} no se encontró en la lista."
+    TP_NOT_INPROGRESS: "&8» &cEl dragón {1} no está en PROGRESO."
+    TP_SUCCESS: "&8» &aEl dragón &2'{1}' &aha sido teletransportado a &2{2} {3} {4} {5}"
+    TP_INVALID_COORDS: "&8» &cEl formato de coordenadas son invalidas"
+    TP_INVALID_WORLD: "&8» &cEl mundo es inválido o no existe."
+
+    #Delete
+    DELETE: "&8» &aEl dragón {1} ha sido eliminado exitosamente."
+    DELETE_USAGE: "&cUso correcto: /{cmd} delete <dragón>"
+    DELETE_NOT_EXIST: "&8» &cEl dragón {1} no se encontró en la lista."
+    DELETE_IN_PROGRESS: "&8» &cNo puedes eliminar un dragón que está en PROGRESO."
+
+    #reload
+    RELOAD: '&aAll YML files have been successfully reset.'
+    RELOAD_COOLDOWN: 'You must wait {1} before reloading the configuration.'
+
+    # Scheduler
+    SCHEDULER_LIST_HEADER: "&f&lLista de programación de dragones &f{1}"
+    SCHEDULER_LIST: "&7(id: {1}) &8| &a{2} &8| &f{3}"
+    SCHEDULER_LIST_GLOBAL: "&7({1}) | (id: {2}) &8| &a{3} &8| &f{4}"
+    SCHEDULER_CREATE: "&aSe configuró la programación para {1} en {2} {3} {4}"
+    SCHEDULER_REMOVE: "&cSe eliminó la programación {2} para el dragón {1}"
+    SCHEDULER_USAGE: "&cComando inválido. Uso: /jdragon scheduler <create/delete/list>"
+    SCHEDULER_USAGE_CREATE: "&cUso: /{cmd} scheduler create <nombre> <tipo> <día> <hora:minuto>"
+    SCHEDULER_USAGE_DELETE: "&cUso: /{cmd} scheduler remove (nombre) (id)"
+    SCHEDULER_USAGE_LIST: "&cUso: /{cmd} scheduler list (nombre)"
+    SCHEDULER_NO_EXIST: "&cEl dragón {1} no existe"
+    SCHEDULER_INVALID_DAY: "&cEl día especificado es inválido."
+    SCHEDULER_INVALID_VALUE: "&cEl número especificado es inválido o no existe."
+    SCHEDULER_INVALID_SCHEDULE: "&cEl tipo de programación especificado es inválido. Usa 'DAILY', 'MONTHLY', 'WEEKLY'  "
+    SCHEDULER_INVALID_FORMAT: "&cEl formato de tiempo especificado es inválido. Debe ser en formato 'HH:MM:SS'."
+    SCHEDULER_NO_SCHEDULERS: "&cNo hay programaciones"
+
+    SPAWN: "&a¡El dragón {1} se generó con éxito!"
+    SPAWN_NOT_CHECK: "&cNo se encontraron comprobaciones para el dragón, usa /{cmd} reload"
+    SPAWN_USAGE: "&cUso correcto: /{cmd} spawn (nombre) [tiempo] [-s]"
+    SPAWN_INVALID_DATA: "&cFaltan valores en la configuración, revisa la consola."
+    SPAWN_NOT_EXIST: "&8» &cEl dragón {1} no se encontró en la lista y no pudo ser generado."
+    SPAWN_PROBLEMSFOUND: '&8» &cSe encontraron problemas de configuración en {1}. Usa /jdragon info {2} para obtener más información.'
+    SPAWN_INPROGRESS: '&8» &cEl dragón {1} ya está en progreso.'
+
+    # Cancelar
+    CANCEL: '&8» &aSe canceló con éxito el dragón {1}.'
+    CANCEL_NOT_EXIST: "&8» &cEl dragón {1} no se encontró en la lista y no pudo ser cancelado."
+    CANCEL_USAGE: "&cUso correcto: /{cmd} cancel <dragón>"
+    CANCEL_NOPROGRESS: '&6&l¡ESPERA! &cEl dragón {1} no está activo.'
+
+    # Info
+    INFO: "&aMostrando información para el dragón {1}"
+    INFO_NOT_EXIST: "&8» &cEl dragón {1} no se encontró en la lista."
+    INFO_USAGE: "&cUso correcto: /{cmd} info <dragón>"
+
+    # Listar
+    LIST: "&7{1} &8| &eNombre: &f{2} &8| &eTipo: &f{3} &8| &8✎ &ePlantilla: &f{4}"
+    LIST_EMPTY: "&8» &cParece que no hay dragones. ¡Qué esperas para crear uno!"
+    LIST_USAGE: "&cUso correcto: /{cmd} info"
+
+    # ConfigurarLoc
+    SET_USAGE: "&cUso correcto: /{cmd} setloc <nombreDragón> <spawn/endcrystals> [número]"
+    SET_NOT_EXIST: "&8» &cEl dragón &l{1} &cno se encontró en la lista."
+    SET_SUCCESS: "&8» &aHas configurado con éxito &2'{1}' &apara el dragón &2'{2}'."
+
+    # Configurar
+    SETUP_USAGE: "&cUso correcto: /{cmd} setup <nombreDragón>"
+    SETUP_NOT_EXIST: "&8» &cEl dragón {1} no se encontró en la lista."
+
+    # Prompt
+    PROMPT:
+      USAGE: "&aPor favor, escribe en el chat el nuevo valor para '{2}' | '{1}'. Si quieres cancelar el proceso, simplemente escribe &c'cancel'."
+      CANCEL: "&cProceso cancelado."
+      SUCCESS: "&eEl valor &7'{1}' &efue aplicado para &7'{2}' &een el dragón &7'{3}'"
+
+
+    HELP_USAGE: "&cUso correcto: /{cmd} help (página)"
+    HELP_CONSOLE: |-
+      &7
+      &e&l COMANDOS BÁSICOS DE CONSOLA
+      &7
+      &8 » &e/{cmd} create &7[dragón] <tipo> &8- &fCrea la configuración de tu dragón.
+      &8 » &e/{cmd} delete &7[dragón] &8- &fElimina la configuración de tu dragón.
+      &7
+      &8 » &b/{cmd} spawn <dragón> &8- &fFuerza la generación del dragón.
+      &8 » &b/{cmd} cancel <dragón> &8- &fCancela el dragón en curso.
+      &8 » &b/{cmd} reload &8- &fRecarga la configuración.
+      &8 » &b/{cmd} info <dragón> &8- &fMuestra información del dragón.
+      &7
+    HELP:
+      - "&e&lCOMANDOS BÁSICOS"
+      - "&7"
+      - "&8 » &e/{cmd} create &7[dragón] <tipo> &8- &fCrea la configuración de tu dragón."
+      - "&8 » &e/{cmd} delete &7[dragón] &8- &fElimina la configuración de tu dragón."
+      - ""
+      - "&8 » &e/{cmd} spawn &7[dragón] &8- &fFuerza la generación del dragón."
+      - "&8 » &e/{cmd} info &7[dragón] &8- &fMuestra información del dragón."
+      - "&8 » &e/{cmd} cancel &7[dragón] &8- &fCancela el dragón en curso."
+      - "&8 » &e/{cmd} reload &8- &fRecarga la configuración."
+      - "&7"
+      - "&6&lCOMANDOS DE CONFIGURACIÓN"
+      - "&7"
+      - "&8 » &6/{cmd} setloc &7[dragón] &8- &fEstablece la ubicación de generación del dragón."
+      - "&8 » &6/{cmd} setup &7[dragón] &6endcrystals|spawn &7(1 - 10) &8- &fEstablece los cristales de reaparición para generar el dragón."
+      - "&7"
+      - "&a&lCOMANDOS DE OBJETOS"
+      - "&7"
+      - "&8 » &a/{cmd} item give (objeto) &8- &fEntrega el objeto a un jugador."
+      - "&8 » &a/{cmd} item save (objeto) &8- &fGuarda un objeto en basedataitems."
+      - "&8 » &a/{cmd} item get (objeto) &8- &fRecupera el objeto para ti mismo."
+      - "&8 » &a/{cmd} item list &8- &fVe la lista de objetos que tienes."
+      - "&8 » &a/{cmd} item delete (objeto) &8- &fElimina un objeto existente."
+      - "&7"
