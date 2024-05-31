@@ -1,0 +1,100 @@
+DEFENCE:
+  REGENERATION:
+    enabled: true
+    radius: 100
+    regeneration:
+      amount: 100
+      speed-ticks: 1
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &d&lREGENERACIÓN </CENTER>'
+      - '[message] <CENTER>&fEl dragón regenerará &d100 &fpuntos de salud. </CENTER>'
+      - '[message] &6'
+  REPULSION:
+    enabled: true
+    radius: 100
+    repulsion:
+      speed-ticks: 10
+      repetitions: 6
+      strength-repulsion: 5
+      vertical-repulsion: 0.5
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &f&lREPULSIÓN  </CENTER>'
+      - '[message] <CENTER>&fSe generó una repulsión en un radio de &6{radius} &fbloques </CENTER>'
+      - '[message] <CENTER>&6{affected} &fjugadores fuergo afectados.</CENTER>'
+      - '[message] &6'
+ATTACKS:
+  DRAIN_LIFE:
+    enabled: true
+    radius: 100
+    drain_life:
+      effects:
+        - POISON;20;1
+        - SLOWNESS;20;1
+        - WEAKNESS;20;1
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &5&lDRENAR_VIDA </CENTER>'
+      - '[message] <CENTER>&fLanzó un hechizo en un radio de &6{radius} &fbloques </CENTER>'
+      - '[message] <CENTER>&6{affected} &fnjugadores recibieron efectos negativos.</CENTER>'
+      - '[message] &6'
+  LIGHTNING:
+    enabled: true
+    radius: 100
+    lightning:
+      radius: 10
+      max-random-increase: 5
+      IA: false
+      radians-per-second: 4
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &5&lRAYO </CENTER>'
+      - '[message] <CENTER>&fLanzó un rayo en un radio de &6{radius} &fbloques </CENTER>'
+      - '[message] <CENTER>&6{affected} &fjugadores fueron afectados.</CENTER>'
+      - '[message] &6'
+  FIREBALL:
+    enabled: true
+    radius: 100
+    fireball:
+      speed-ticks: 10
+      max-player-attacks: 3
+      incendiary: false
+      amount: 3
+      damage: 10.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &4&lBOLA DE FUEGO  </CENTER>'
+      - '[message] <CENTER>&fLanzo una bola de fuego a {affected} jugadores</CENTER>'
+      - '[message] &6'
+  ARECK:
+    enabled: true
+    radius: 100
+    areck:
+      speed-ticks: 5
+      amount: 150
+      area: 25.0
+      incendiary: false
+      damage: 10.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &3&lARECK </CENTER>'
+      - '[message] <CENTER>&fUna pequeña lluvia bajo el dragón aparecerá. </CENTER>'
+      - '[message] &6'
+  MEGA_LIGHTNING:
+    enabled: true
+    radius: 100
+    mega_lightning:
+      area: 25.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lDRAGÓN &8| &9&lMEGA RAYO </CENTER>'
+      - '[message] <CENTER>&fSe lanzó un mega rayo.  </CENTER>'
+      - '[message] &6'
