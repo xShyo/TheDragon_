@@ -1,0 +1,100 @@
+DEFENCE:
+  REGENERATION:
+    enabled: true
+    radius: 100
+    regeneration:
+      amount: 100
+      speed-ticks: 1
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &d&lREGENERATION </CENTER>'
+      - '[message] <CENTER>&fThe dragon will regenerate &d100 health &fpoints. </CENTER>'
+      - '[message] &6'
+  REPULSION:
+    enabled: true
+    radius: 100
+    repulsion:
+      speed-ticks: 10
+      repetitions: 6
+      strength-repulsion: 5
+      vertical-repulsion: 0.5
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &f&lREPULSION </CENTER>'
+      - '[message] <CENTER>&fGenerated a repulse in a radius of &6{radius} &fblocks </CENTER>'
+      - '[message] <CENTER>&fSent &6{affected} &fplayers flying.</CENTER>'
+      - '[message] &6'
+ATTACKS:
+  DRAIN_LIFE:
+    enabled: true
+    radius: 100
+    drain_life:
+      effects:
+        - POISON;20;1
+        - SLOWNESS;20;1
+        - WEAKNESS;20;1
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &5&lDRAIN_LIFE </CENTER>'
+      - '[message] <CENTER>&fCast a spell in a radius of &6{radius} &fblocks </CENTER>'
+      - '[message] <CENTER>&6{affected} &fnplayers received negative effects.</CENTER>'
+      - '[message] &6'
+  LIGHTNING:
+    enabled: true
+    radius: 100
+    lightning:
+      radius: 10
+      max-random-increase: 5
+      IA: false
+      radians-per-second: 4
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &5&lLIGHTNING </CENTER>'
+      - '[message] <CENTER>&fLaunched a lightning strike in a radius of &6{radius} &fblocks </CENTER>'
+      - '[message] <CENTER>&6{affected} &fplayers were affected.</CENTER>'
+      - '[message] &6'
+  FIREBALL:
+    enabled: true
+    radius: 100
+    fireball:
+      speed-ticks: 10
+      max-player-attacks: 3
+      incendiary: false
+      amount: 3
+      damage: 10.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &4&lFIREBALL </CENTER>'
+      - '[message] <CENTER>&fI throw a fireball at {affected} players</CENTER>'
+      - '[message] &6'
+  ARECK:
+    enabled: true
+    radius: 100
+    areck:
+      speed-ticks: 5
+      amount: 150
+      area: 25.0
+      incendiary: false
+      damage: 10.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &3&lARECK </CENTER>'
+      - '[message] <CENTER>&fA little rain under the dragon will appear. </CENTER>'
+      - '[message] &6'
+  MEGA_LIGHTNING:
+    enabled: true
+    radius: 100
+    mega_lightning:
+      area: 25.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&lTHE DRAGON &8| &9&lMEGA LIGHTNING </CENTER>'
+      - '[message] <CENTER>&fA mega lightning strike was launched. </CENTER>'
+      - '[message] &6'
