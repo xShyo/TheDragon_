@@ -1,0 +1,100 @@
+DEFENCE:
+  REGENERATION:
+    enabled: true
+    radius: 100
+    regeneration:
+      amount: 100
+      speed-ticks: 1
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &d&l再生 </CENTER>'
+      - '[message] <CENTER>&f末影龙将会恢复 &d100 点&f生命值. </CENTER>'
+      - '[message] &6'
+  REPULSION:
+    enabled: true
+    radius: 100
+    repulsion:
+      speed-ticks: 10
+      repetitions: 6
+      strength-repulsion: 5
+      vertical-repulsion: 0.5
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &f&l猛力击飞 </CENTER>'
+      - '[message] <CENTER>&f生成半径 &6{radius} &f格的冲击波</CENTER>'
+      - '[message] <CENTER>&f将 &6{affected} &f个玩家击飞.</CENTER>'
+      - '[message] &6'
+ATTACKS:
+  DRAIN_LIFE:
+    enabled: true
+    radius: 100
+    drain_life:
+      effects:
+        - POISON;20;1
+        - SLOWNESS;20;1
+        - WEAKNESS;20;1
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &5&l噬魂 </CENTER>'
+      - '[message] <CENTER>&f生成半径 &6{radius} &f格的吸血光环</CENTER>'
+      - '[message] <CENTER>&f附近的 &6{affected} &f个玩家将会获得负面效果.</CENTER>'
+      - '[message] &6'
+  LIGHTNING:
+    enabled: true
+    radius: 100
+    lightning:
+      radius: 10
+      max-random-increase: 5
+      IA: false
+      radians-per-second: 4
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &5&l电闪雷鸣 </CENTER>'
+      - '[message] <CENTER>&f在半径 &6{radius} &f格范围内生成大量闪电</CENTER>'
+      - '[message] <CENTER>&6{affected} &f个玩家会遭到攻击.</CENTER>'
+      - '[message] &6'
+  FIREBALL:
+    enabled: true
+    radius: 100
+    fireball:
+      speed-ticks: 10
+      max-player-attacks: 3
+      incendiary: false
+      amount: 3
+      damage: 10.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &4&l烈焰飞弹 </CENTER>'
+      - '[message] <CENTER>&f向玩家 {affected} 喷吐烈焰火球</CENTER>'
+      - '[message] &6'
+  ARECK:
+    enabled: true
+    radius: 100
+    areck:
+      speed-ticks: 5
+      amount: 150
+      area: 25.0
+      incendiary: false
+      damage: 10.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &3&l干扰 </CENTER>'
+      - '[message] <CENTER>&f龙下方将会出现阵雨. </CENTER>'
+      - '[message] &6'
+  MEGA_LIGHTNING:
+    enabled: true
+    radius: 100
+    mega_lightning:
+      area: 25.0
+    sending:
+      - '[sound] BLOCK_NOTE_BLOCK_PLING;1;1'
+      - '[message] &6'
+      - '[message] <CENTER> &6&l末影龙 &8| &9&l究极雷暴 </CENTER>'
+      - '[message] <CENTER>&f龙发射了一颗终极雷暴弹. </CENTER>'
+      - '[message] &6'
