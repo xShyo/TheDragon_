@@ -1,0 +1,197 @@
+MESSAGES:
+  # 在此可以修改消息短文.
+  PLACEHOLDER:
+    INPROGRESS: '&c正在发生'
+    SECONDS: s
+    MINUTES: m
+    HOURS: h
+    DAYS: d
+    SEPARATOR: ', '
+    PLAYER_STATS:
+      NO_NEW_RECORD: "&7&l(无纪录)"
+      NEW_RECORD: "&d&l(新纪录!)"
+      POSITION: "&7(排名 #{position})"
+
+  # 若生成的龙有预设且非所有路径都被添加，那么会使用默认的内容。
+  TEMPLATES:
+    DEFAULT:
+      END_CRYSTAL_EXPLOTING:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &5 ۵ &7{player} &d成功摧毁了一颗&5末影水晶&d!'
+      END_CRYSTAL_RESPAWN:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &5 ۵ &d一个新的末影水晶已经出现!'
+      - '[title] &5 ۵ &d一个新的末影水晶已经出现!'
+      SPAWNING:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &5&lDRAGON &8| &f末影龙将在 &a{time} 后生成在末地，输入命令 &5/warp end&f 传送'
+      DEATH:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] '
+      - '[broadcast] <CENTER> &e{customName} &e已被斩杀... </CENTER>'
+      - '[broadcast] '
+      - '[broadcast] <CENTER> &e{killer} &7造成了最终一击.</CENTER>'
+      - '[broadcast] ' 
+      - '[broadcast] <CENTER> &#fbb347⚔ &#fbaf4c统&#fbac51计&#fba855数&#fca55a据&#fd8585⚔ </CENTER>'
+      - '[TopsMessage] <CENTER> &8▸ &c{displayname} &8- &e造成伤害&7: &c{damage} ❤ &8- {rewardname} </CENTER>'
+      - '[broadcast] '
+      - '[PersonalStats] <CENTER> &e你的伤害: &a{playerdamage} &f{state} &7{position} </CENTER>'
+      - '[broadcast] '
+      - '[command] tu comando aquí'
+      REGENERATED:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &8████████'
+      - '[broadcast] &8███&0██&8███ &8» &f{customName} &f已经出现.'
+      - '[broadcast] &8██&0█&5█&0██&8██'
+      - '[broadcast] &8█&0█&5█&0██&5█&0█&8█ &c&lBOSS'
+      - '[broadcast] &8█&0███&5█&0██&8█ &8► &f末影龙血量&7: &a{health} &4❤'
+      - '[broadcast] &8█&0█&5█&0████&8█ &8► &6输出量前三可获得独特奖励.'
+      - '[broadcast] &8██&0██&5█&0█&8██'
+      - '[broadcast] &8████████'
+      - '[command] your command here'
+      HALFLIFE:
+      - '[sound] ENTITY_EXPERIENCE_ORB_PICKUP;1;1'
+      - '[broadcast] &8████████'
+      - '[broadcast] &8███&0██&8███ &8» &f{customName} &f血量已低于 50%.'
+      - '[broadcast] &8██&0█&5█&0██&8██'
+      - '[broadcast] &8█&0█&5█&0██&5█&0█&8█ &c&lBOSS'
+      - '[broadcast] &8█&0███&5█&0██&8█ &8► &f末影龙血量&7: &a{halflife} &4❤'
+      - '[broadcast] &8█&0█&5█&0████&8█ &8► &6输入命令 /warp end 参与屠龙并获得大量奖励物品.'
+      - '[broadcast] &8██&0██&5█&0█&8██'
+      - '[broadcast] &8████████'
+      - '[command] your command here'
+
+
+  ITEM:
+    HELP: "&c「物品模块」&f&c/{cmd} item give|get|list|save|delete <物品> <数量>"
+    PLAYERNOTFOUNT: "&c「物品模块」&c玩家不存在"
+    LISTISEMPTY: "&c「物品模块」&c尚无保存的物品."
+    ITEMINHAND: "&c「物品模块」&c手中需持有物品"
+    NOT_EXIST: "&c「物品模块」&c找不到名为 {1} 的物品"
+    NOTNUMBER: "&c「物品模块」&c填入的数量不是有效数字!"
+    GETITEM: "&c「物品模块」&c物品已发送至你的背包"
+    GIVEITEM: "&c「物品模块」&e{2} 个 {1} 已发送至玩家 {3} 的背包"
+    SAVE: "&c「物品模块」&a物品已保存为 {1}"
+    DELETE: "&c「物品模块」&c物品 {1} 已被成功删除"
+
+  COMMANDS:
+    # 创建
+    CREATE: "&7{2} &e类型的末影龙 &7{1} &e可使用命令 &7/{cmd} setup {1} &e进行配置."
+    CREATE_USAGE: "&8» &c命令用法: /{cmd} create <自定义龙名称> <类型>"
+    CREATE_EXIST: "&8» &c名称重复, 请换一个名称."
+    INVALID_DRAGON_TYPE: "&8» &e请填入 &7'SUMMON_PORTAL'(传送门生成) &e或 &7'SUMMON_DEFAULT'(默认生成)"
+    CREATE_ALPHANUMERIC: "&8» &c输入的末影龙名称应只包含英文字母与数字."
+
+    # 传送
+    TP_USAGE: "&c命令用法: /{cmd} teleport <自定义龙名称> <x> <y> <z> <世界名称>"
+    TP_NOT_EXIST: "&8» &c自定义龙 {1} 未在列表中."
+    TP_NOT_INPROGRESS: "&8» &c自定义龙 {1} 尚未生成."
+    TP_SUCCESS: "&8» &a自定义龙 &2'{1}' &a已被传送至 &2{2} {3} {4} {5}"
+    TP_INVALID_COORDS: "&8» &c坐标格式无效."
+    TP_INVALID_WORLD: "&8» &c世界无效或未载入."
+
+    # 删除
+    DELETE: "&8» &a自定义龙 {1} 已被成功清除."
+    DELETE_USAGE: "&c命令用法: /{cmd} delete <自定义龙名称>"
+    DELETE_NOT_EXIST: "&8» &c自定义龙 {1} 未在列表中."
+    DELETE_IN_PROGRESS: "&8» &c自定义龙 {1} 尚未生成."
+
+    # 重载
+    RELOAD: '&a所有配置文件重新读取完毕.'
+    RELOAD_COOLDOWN: '重载配置前你仍需等待 {1}.'
+
+    # 定时任务
+    SCHEDULER_LIST_HEADER: "&f&l生成的自定义龙 &f{1}"
+    SCHEDULER_LIST: "&7(id: {1}) &8| &a{2} &8| &f{3}"
+    SCHEDULER_LIST_GLOBAL: "&7({1}) | (id: {2}) &8| &a{3} &8| &f{4}"
+    SCHEDULER_CREATE: "&a自定义龙 {1} 被设置于 {2} {3} {4}"
+    SCHEDULER_REMOVE: "&c成功删除了自定义龙 {1} 的 {2} "
+    SCHEDULER_USAGE: "&c无效命令. 正确用法: /jdragon scheduler <create/delete/list>"
+    SCHEDULER_USAGE_CREATE: "&cUsage: /{cmd} scheduler create <名称> <类型> <天数> <小时数:分钟数>"
+    SCHEDULER_USAGE_DELETE: "&cUsage: /{cmd} scheduler remove (名称) (id)"
+    SCHEDULER_USAGE_LIST: "&cUsage: /{cmd} scheduler list (名称)"
+    SCHEDULER_NO_EXIST: "&c自定义龙 {1} 不存在"
+    SCHEDULER_INVALID_DAY: "&c指定天数无效."
+    SCHEDULER_INVALID_VALUE: "&c指定数字无效或不存在."
+    SCHEDULER_INVALID_SCHEDULE: "&c指定定时类型无效. 请输入 'DAILY'(每天), 'MONTHLY'(每月), 'WEEKLY'(每周)"
+    SCHEDULER_INVALID_FORMAT: "&c指定时间格式无效. 应当为 'HH:MM:SS' 格式."
+    SCHEDULER_NO_SCHEDULERS: "&c无定时任务可用"
+
+    # 生成
+    SPAWN: "&a自定义龙 {1} 生成成功!"
+    SPAWN_NOT_CHECK: "&c没有对自定义龙 {1} 的有效检查, 请使用命令 /{cmd} reload"
+    SPAWN_USAGE: "&c命令用法: /{cmd} spawn (数字) [时间] [-s]"
+    SPAWN_INVALID_DATA: "&c配置文件存在错误, 请检查控制台."
+    SPAWN_NOT_EXIST: "&8» &c自定义龙 {1} 在列表中不存在并无法生成."
+    SPAWN_PROBLEMSFOUND: '&8» &c在 {1} 中找到了配置文件存在的问题. 使用命令 /jdragon info {2} 来获取详细信息.'
+    SPAWN_INPROGRESS: '&8» &c自定义龙 {1} 正在生成.'
+
+    #Cancel
+    CANCEL: '&8» &a自定义龙 {1} 的生成已被成功取消.'
+    CANCEL_NOT_EXIST: "&8» &c自定义龙 {1} 在列表中不存在并无法取消."
+    CANCEL_USAGE: "&c命令用法: /{cmd} cancel <自定义龙名称>"
+    CANCEL_NOPROGRESS: '&6&lWAIT! &c自定义龙 {1} 尚未激活.'
+
+    # 信息
+    INFO: "&a显示有关自定义龙 {1} 的信息"
+    INFO_NOT_EXIST: "&8» &c自定义龙 {1} 在列表中不存在."
+    INFO_USAGE: "&c命令用法: /{cmd} info <自定义龙名称>"
+
+    # 列表
+    LIST: "&7{1} &8| &e名称: &f{2} &8| &e类型: &f{3} &8| &8✎ &e预设: &f{4}"
+    LIST_EMPTY: "&8» &c这里没有自定义末影龙. 赶快创建一个吧!"
+    LIST_USAGE: "&c命令用法: /{cmd} info"
+
+    # 设置位置
+    SET_USAGE: "&c命令用法: /{cmd} setloc <自定义龙> <spawn/endcrystals> [整数]"
+    SET_NOT_EXIST: "&8» &c自定义龙 &l{1} &c在列表中不存在."
+    SET_SUCESS: "&8» &a成功为自定义龙 &2'{2}' 设置了 &2'{1}' &a."
+
+    # 建立
+    SETUP_USAGE: "&c命令用法: /{cmd} setup <自定义龙>"
+    SETUP_NOT_EXIST: "&8» &c自定义龙 {1} 在列表中不存在."
+
+    PROMPT:
+      USAGE: "&a请在聊天栏中输入 '{2}' 的替换值 | '{1}', 若要取消操作请输入 &c'cancel'."
+      CANCEL: "&c操作已取消."
+      SUCCESS: "&e值 &7'{1}' &e已应用至自定义龙 &7'{3}' 的 &7'{2}' &e中"
+
+
+    #Help
+    HELP_USAGE: "&c命令用法: /{cmd} help (页码)"
+    HELP_CONSOLE: |-
+      &7
+      &e&l 基础控制台命令
+      &7
+      &8 » &e/{cmd} create &7[自定义龙] <类型> &8- &f创建自定义龙配置.
+      &8 » &e/{cmd} delete &7[自定义龙] &8- &f删除自定义龙配置.
+      &7
+      &8 » &b/{cmd} spawn <自定义龙名称> &8- &f强制生成自定义龙.
+      &8 » &b/{cmd} cancel <自定义龙名称> &8- &f取消生成自定义龙.
+      &8 » &b/{cmd} reload &8- &f重载配置文件.
+      &8 » &b/{cmd} info <自定义龙名称> &8- &f显示自定义龙的信息.
+      &7
+    HELP:
+      - "&e&l基础命令"
+      - "&7"
+      - "&8 » &e/{cmd} create &7[自定义龙] <类型> &8- &f创建自定义龙配置."
+      - "&8 » &e/{cmd} delete &7[自定义龙] &8- &f删除自定义龙配置."
+      - ""
+      - "&8 » &e/{cmd} spawn &7[自定义龙] &8- &f强制生成自定义龙."
+      - "&8 » &e/{cmd} info &7[自定义龙] &8- &f显示自定义龙的信息."
+      - "&8 » &e/{cmd} cancel &7[自定义龙] &8- &f取消生成自定义龙."
+      - "&8 » &e/{cmd} reload &8- &f重载配置文件."
+      - "&7"
+      - "&6&l配置命令"
+      - "&7"
+      - "&8 » &6/{cmd} setloc &7[自定义龙] &8- &f设置自定义龙的生成位置."
+      - "&8 » &6/{cmd} setup &7[自定义龙] &6endcrystals|spawn &7(1 - 10) &8- &f设置召唤自定义龙所需的末影水晶数量."
+      - "&7"
+      - "&a&l物品命令"
+      - "&7"
+      - "&8 » &a/{cmd} item give (物品) &8- &f将物品给予玩家."
+      - "&8 » &a/{cmd} item save (物品) &8- &f将物品保存至数据库."
+      - "&8 » &a/{cmd} item get (物品) &8- &f获取物品."
+      - "&8 » &a/{cmd} item list &8- &f浏览保存的物品."
+      - "&8 » &a/{cmd} item delete (物品) &8- &f删除数据库内保存的物品."
+      - "&7"
